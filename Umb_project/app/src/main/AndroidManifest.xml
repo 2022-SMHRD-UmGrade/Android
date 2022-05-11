@@ -16,9 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Umb_project"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".WebViewActivity"
-            android:exported="false" />
+
         <activity
             android:name=".UmbQrActivity"
             android:exported="false" />

@@ -47,7 +47,7 @@ public class UmbQrActivity extends AppCompatActivity {
                 Toast.makeText(this, user.getUser_id(), Toast.LENGTH_LONG).show();
                 int method = Request.Method.POST;
 
-                String server_url = "http://220.71.97.131:8081/myapp/Rent";
+                String server_url = result.getContents();
 
                 request = new StringRequest(
                         method,
@@ -73,6 +73,7 @@ public class UmbQrActivity extends AppCompatActivity {
 
                         param.put("qrNum",result.getContents());
                         param.put("userId",user.getUser_id());
+
                         return param;
                     }
                 };
