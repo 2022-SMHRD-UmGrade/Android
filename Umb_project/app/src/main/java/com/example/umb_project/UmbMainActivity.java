@@ -76,7 +76,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         int method = Request.Method.POST;
 
 
-        String server_url = "http://220.80.203.18:8081/myapp/Login";
+        String server_url = "http://220.80.203.18:8081/myapp/Android/Login";
 
 
         request = new StringRequest(
@@ -113,7 +113,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
                 int method = Request.Method.POST;
 
 
-                String server_url = "http://220.80.203.18:8081/myapp/Login";
+                String server_url = "http://220.71.97.131:8081/myapp/Android/Login";
 
                 request = new StringRequest(
                         method,

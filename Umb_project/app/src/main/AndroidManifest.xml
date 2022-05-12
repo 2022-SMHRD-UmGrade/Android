@@ -17,10 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Umb_project"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".UpdateActivity"
             android:exported="false" />
-             <activity
+        <activity
             android:name=".UmbQrActivity"
             android:exported="false" />
 
