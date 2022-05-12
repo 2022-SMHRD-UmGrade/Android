@@ -41,7 +41,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
 
     private Button scanQRBtn;
     TextView tvUser1, tvUserPoint2;
-    Button btnMypage, btnLogout;
+    Button btnMypage, btnLogout, btnBoard;
     RequestQueue queue;
     StringRequest request;
 
@@ -56,6 +56,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         tvUser1 = findViewById(R.id.tvUser1);
         tvUserPoint2 = findViewById(R.id.tvUserPoint2);
         btnMypage = findViewById(R.id.btnMypage);
+        btnBoard = findViewById(R.id.btnBoard);
         btnLogout = findViewById(R.id.btnLogout);
 
         tvUser1.setText(vo.getUser_id());
@@ -64,7 +65,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         queue = Volley.newRequestQueue(UmbMainActivity.this);
 
         scanQRBtn = (Button) findViewById(R.id.scanQR);
-
+        //QR코드 스캔
         scanQRBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,10 +75,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         });
 
         int method = Request.Method.POST;
-
-
         String server_url = "http://220.80.203.18:8081/myapp/Android/Login";
-
 
         request = new StringRequest(
                 method,
@@ -86,10 +84,8 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
                     @Override
                     public void onResponse(String response) {
 
-
                         getAppKeyHash();
                         initView();
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -102,7 +98,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
                 }
         );
         queue.add(request);
-
+        //마이페이지
         btnMypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,8 +107,6 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
                 intent.getStringExtra("response");
 
                 int method = Request.Method.POST;
-
-
                 String server_url = "http://220.71.97.131:8081/myapp/Android/Login";
 
                 request = new StringRequest(
@@ -141,18 +135,25 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
                 queue.add(request);
             }
         });
-
+        //로그아웃
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 vo = null;
 
                 Intent intent = new Intent(UmbMainActivity.this, UmbLoginActivity.class);
 
                 startActivity(intent);
+            }
+        });
 
-
+        btnBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vo = UserInfo.info;
+                Log.d("info", vo.toString());
+                Intent intent = new Intent(UmbMainActivity.this, UmbBoardActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -220,7 +221,6 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         marker1.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
         mapView.addPOIItem(marker1);
-
 
 
     }

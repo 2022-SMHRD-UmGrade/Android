@@ -25,7 +25,7 @@ public class UmbMypageActivity extends AppCompatActivity {
 
     Button btnUtpage;
 
-    User vo = UserInfo.info;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,8 @@ public class UmbMypageActivity extends AppCompatActivity {
 
         queue = Volley.newRequestQueue(UmbMypageActivity.this);
 
+        User vo = UserInfo.info;
+
         infoId.setText(vo.getUser_id());
         infoName.setText(vo.getUser_name());
         infoNick.setText(vo.getUser_nick());
@@ -61,6 +63,7 @@ public class UmbMypageActivity extends AppCompatActivity {
         btnUtpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User vo = UserInfo.info;
                 Log.d("ddd", vo.toString());
                 Intent intent = new Intent(UmbMypageActivity.this, UpdateActivity.class);
                 startActivity(intent);

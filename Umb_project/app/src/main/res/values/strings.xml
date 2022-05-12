@@ -5,6 +5,7 @@
     <string name="tvUser2_text">님</string>
     <string name="tvPoint1_text">포인트:</string>
     <string name="btnMypage_text">마이페이지</string>
+    <string name="btnBoard">공유게시판</string>
     <string name="btnLogout_text">로그아웃</string>
 
     <!-- Umb_Login.xml -->
@@ -48,5 +49,16 @@
     <string name="ChAddr">새 주소</string>
     <string name="btnUpdate">수정하기</string>
 
+    <!-- UmbBoard.xml -->
+    <string name="tvBoardTitle">공유 게시판</string>
+    <string name="btnItContent">글작성</string>
+
+    <!-- UmbCommunity.xml -->
+    <string name="tvCommunity">공유 게시판</string>
+    <string name="tvTitle">제목</string>
+    <string name="tvWriter">작성자</string>
+    <string name="tvContent">내용</string>
+    <string name="btnSave">등록</string>
+    <string name="btnCancel">취소</string>
 
 </resources>
