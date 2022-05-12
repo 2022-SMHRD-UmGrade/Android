@@ -35,8 +35,8 @@ public class UmbJoinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_umb_join);
 
-        edtJoinId = findViewById(R.id.edtJoinPw);
-        edtJoinPw = findViewById(R.id.edtJoinName);
+        edtJoinId = findViewById(R.id.edtJoinId);
+        edtJoinPw = findViewById(R.id.edtJoinPw);
         edtJoinName = findViewById(R.id.edtJoinName);
         edtJoinNick = findViewById(R.id.edtJoinNick);
         edtJoinEmail = findViewById(R.id.edtJoinEmail);

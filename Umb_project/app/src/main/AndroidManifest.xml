@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.umb_project">
     <!-- 인터넷 권한 설정 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 지도 API 권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 지도 API 권한 설정 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
@@ -17,9 +18,9 @@
         android:theme="@style/Theme.Umb_project"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".WebViewActivity"
+            android:name=".UpdateActivity"
             android:exported="false" />
-        <activity
+             <activity
             android:name=".UmbQrActivity"
             android:exported="false" />
 

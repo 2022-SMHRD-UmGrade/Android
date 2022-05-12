@@ -38,6 +38,15 @@
     <string name="userType_text">유형</string>
     <string name="userStatus_text">상태</string>
     <string name="userPoint_text">포인트</string>
+    <string name="btnUtpage">수정페이지</string>
+
+    <!-- Umb_update.xml -->
+    <string name="tvUpdate">내 정보 수정하기</string>
+    <string name="ChPw">새 비밀번호</string>
+    <string name="ChNick">새 닉네임</string>
+    <string name="ChEmail">새 이메일</string>
+    <string name="ChAddr">새 주소</string>
+    <string name="btnUpdate">수정하기</string>
 
 
 </resources>

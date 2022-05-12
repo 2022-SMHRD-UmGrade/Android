@@ -45,6 +45,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
     RequestQueue queue;
     StringRequest request;
 
+    User vo = UserInfo.info;
 
 
     @Override
@@ -56,6 +57,9 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         tvUserPoint2 = findViewById(R.id.tvUserPoint2);
         btnMypage = findViewById(R.id.btnMypage);
         btnLogout = findViewById(R.id.btnLogout);
+
+        tvUser1.setText(vo.getUser_id());
+        tvUserPoint2.setText(vo.getUser_point());
 
         queue = Volley.newRequestQueue(UmbMainActivity.this);
 
@@ -118,11 +122,11 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
                             @Override
                             public void onResponse(String response) {
 
-                                Intent intent2 = new Intent(UmbMainActivity.this, UmbMypageActivity.class);
+                                Intent intent = new Intent(UmbMainActivity.this, UmbMypageActivity.class);
 
-                                intent2.putExtra("response", response);
+                                intent.putExtra("response", response);
 
-                                startActivity(intent2);
+                                startActivity(intent);
                             }
                         },
                         new Response.ErrorListener() {
@@ -142,7 +146,11 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
             @Override
             public void onClick(View view) {
 
+                vo = null;
 
+                Intent intent = new Intent(UmbMainActivity.this, UmbLoginActivity.class);
+
+                startActivity(intent);
 
 
             }

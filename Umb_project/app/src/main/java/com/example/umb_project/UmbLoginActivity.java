@@ -4,10 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import android.content.Context;
+
 import android.content.Intent;
 
-import android.content.SharedPreferences;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,7 +42,7 @@ public class UmbLoginActivity extends AppCompatActivity {
     RequestQueue queue;
     StringRequest request;
 
-   String user_id, user_pw;
+
 
 
     @Override
@@ -82,7 +82,6 @@ public class UmbLoginActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
 
-
                                 if (response.length() > 1) {
                                     try {
                                         JSONObject jsonObject = new JSONObject(response);
@@ -102,6 +101,8 @@ public class UmbLoginActivity extends AppCompatActivity {
 
                                         UserInfo.info = vo;
 
+                                        Log.v("dddddd", vo.toString());
+
                                         Intent intent = new Intent(UmbLoginActivity.this, UmbMainActivity.class);
 
                                         intent.putExtra("response", response);
@@ -110,18 +111,7 @@ public class UmbLoginActivity extends AppCompatActivity {
 
                                         finish();
 
-                                        if(auto.isChecked()) {
-                                            if(user_id.equals(vo.getUser_id()) && user_pw.equals(vo.getUser_pw())) {
-                                                Toast.makeText(UmbLoginActivity.this,
-                                                        user_id+"님 자동로그인 입니다.",
-                                                        Toast.LENGTH_SHORT).show();
-                                                Intent intent2 = new Intent(UmbLoginActivity.this, UmbMainActivity.class);
 
-                                                intent.putExtra("response", response);
-
-                                                startActivity(intent2);
-                                            }
-                                        }
 
                                     } catch (JSONException e) {
                                         e.printStackTrace();

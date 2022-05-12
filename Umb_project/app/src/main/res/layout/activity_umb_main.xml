@@ -87,7 +87,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintGuide_percent="0.14"
-        app:layout_constraintStart_toEndOf="@+id/mapView" />
+         />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
