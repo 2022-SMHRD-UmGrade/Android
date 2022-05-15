@@ -22,14 +22,10 @@ import com.android.volley.toolbox.Volley;
 import com.example.umb_project.info.UserInfo;
 import com.example.umb_project.vo.User;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UpdateActivity extends AppCompatActivity {
+public class UmbUserUpdateActivity extends AppCompatActivity {
     EditText edtChPw, edtChNick, edtChEmail, edtChAddr;
     Button btnUpdate;
     TextView tvUser3;
@@ -41,7 +37,7 @@ public class UpdateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update);
+        setContentView(R.layout.activity_umb_user_update);
         tvUser3 = findViewById(R.id.tvUser3);
         edtChPw = findViewById(R.id.edtChPw);
         edtChNick = findViewById(R.id.edtChNick);
@@ -51,13 +47,13 @@ public class UpdateActivity extends AppCompatActivity {
 
         tvUser3.setText(vo.getUser_id());
 
-        queue = Volley.newRequestQueue(UpdateActivity.this);
+        queue = Volley.newRequestQueue(UmbUserUpdateActivity.this);
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int method = Request.Method.POST;
-                String server_url = "http://220.80.203.18:8081/myapp/Update";
+                String server_url = "http://220.80.203.18:8081/myapp/Android/Update";
 
                 request = new StringRequest(
                         method,
@@ -65,11 +61,11 @@ public class UpdateActivity extends AppCompatActivity {
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Toast.makeText(UpdateActivity.this,
+                                Toast.makeText(UmbUserUpdateActivity.this,
                                         "수정 성공" + response,
                                         Toast.LENGTH_SHORT).show();
                                 Log.d("dddd", vo.toString());
-                                Intent intent = new Intent(UpdateActivity.this, UmbMypageActivity.class);
+                                Intent intent = new Intent(UmbUserUpdateActivity.this, UmbMypageActivity.class);
 
                                 startActivity(intent);
                             }
@@ -77,7 +73,7 @@ public class UpdateActivity extends AppCompatActivity {
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(UpdateActivity.this,
+                                Toast.makeText(UmbUserUpdateActivity.this,
                                         "수정 실패!" + error.toString(),
                                         Toast.LENGTH_SHORT).show();
                             }

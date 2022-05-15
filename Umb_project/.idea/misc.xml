@@ -3,14 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_board.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_board.xml" value="0.3575949367088608" />
+        <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_cmt_insert.xml" value="0.25" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_community.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_join.xml" value="0.1875" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_login.xml" value="0.1875" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_main.xml" value="0.3546195652173913" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_mypage.xml" value="0.3546195652173913" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_qr.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_umb_user_update.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/activity_update.xml" value="0.3546195652173913" />
+        <entry key="..\:/Users/smhrd/Desktop/2nd/android/Umb_project/app/src/main/res/layout/board_list.xml" value="0.25" />
         <entry key="..\:/Users/smhrd/Desktop/GIT/android/Umb_project/app/src/main/res/layout/activity_umb_login.xml" value="0.3609375" />
         <entry key="..\:/Users/smhrd/Desktop/Git/android/Umb_project/app/src/main/res/layout/activity_umb_main.xml" value="0.5" />
         <entry key="..\:/Users/smhrd/Desktop/Git/android/Umb_project/app/src/main/res/layout/activity_umb_mypage.xml" value="0.20277777777777778" />

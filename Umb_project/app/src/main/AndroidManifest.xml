@@ -17,13 +17,16 @@
         android:theme="@style/Theme.Umb_project"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UmbCmtInsertActivity"
+            android:exported="false" />
+        <activity
             android:name=".UmbBoardActivity"
             android:exported="false" />
         <activity
             android:name=".UmbCommunityActivity"
             android:exported="false" />
         <activity
-            android:name=".UpdateActivity"
+            android:name=".UmbUserUpdateActivity"
             android:exported="false" />
         <activity
             android:name=".UmbQrActivity"

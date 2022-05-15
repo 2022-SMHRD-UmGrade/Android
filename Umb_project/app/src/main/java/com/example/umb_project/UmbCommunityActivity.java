@@ -18,7 +18,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.umb_project.info.BoardInfo;
 import com.example.umb_project.info.UserInfo;
+import com.example.umb_project.vo.Board;
 import com.example.umb_project.vo.User;
 
 import java.util.HashMap;
@@ -45,6 +47,7 @@ public class UmbCommunityActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
         btnCancel = findViewById(R.id.btnCancel);
 
+
         queue = Volley.newRequestQueue(UmbCommunityActivity.this);
 
         User vo = UserInfo.info;
@@ -66,8 +69,6 @@ public class UmbCommunityActivity extends AppCompatActivity {
                                 Toast.makeText(UmbCommunityActivity.this,
                                         "등록 성공"+response,
                                         Toast.LENGTH_SHORT).show();
-                                Log.d("response", response);
-                                Log.d("info2", vo.toString());
                             }
                         },
                         new Response.ErrorListener() {

@@ -190,7 +190,6 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         mapViewContainer.addView(mapView);
 
         mapView.setMapViewEventListener(this); // this에 MapView.MapViewEventListener 구현.
-        mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithHeading);
         mapView.setPOIItemEventListener(this);
 
         mapView.setPOIItemEventListener(this);

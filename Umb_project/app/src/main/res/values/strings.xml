@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Umb_project</string>
 
     <!-- Umb_Main.xml -->
@@ -52,6 +52,7 @@
     <!-- UmbBoard.xml -->
     <string name="tvBoardTitle">공유 게시판</string>
     <string name="btnItContent">글작성</string>
+    <string name="btnCmt">댓글달기</string>
 
     <!-- UmbCommunity.xml -->
     <string name="tvCommunity">공유 게시판</string>
@@ -60,5 +61,10 @@
     <string name="tvContent">내용</string>
     <string name="btnSave">등록</string>
     <string name="btnCancel">취소</string>
+
+    <!-- UmbCmtInsert.xml -->
+    <string name="btnInsert">댓글 등록</string>
+
+
 
 </resources>

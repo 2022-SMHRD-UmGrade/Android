@@ -42,13 +42,16 @@ public class UmbLoginActivity extends AppCompatActivity {
     RequestQueue queue;
     StringRequest request;
 
-
-
+    User vo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_umb_login);
+
+        vo = UserInfo.info;
+
+
 
         edtId = findViewById(R.id.edtId);
         edtPw = findViewById(R.id.edtPw);
@@ -72,8 +75,7 @@ public class UmbLoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int method = Request.Method.POST;
 
-                String server_url = "http://220.71.97.131:8081/myapp/Android/Login";
-
+                String server_url = "http://220.80.203.18:8081/myapp/Android/Login";
 
                 request = new StringRequest(
                         method,
@@ -97,7 +99,7 @@ public class UmbLoginActivity extends AppCompatActivity {
                                         String user_status = jsonObject.getString("user_status");
                                         String user_point = jsonObject.getString("user_point");
 
-                                        User vo = new User(user_id, user_pw, user_name, user_nick, user_email, user_phone, user_joindate, user_addr, user_type, user_status, user_point);
+                                        vo = new User(user_id, user_pw, user_name, user_nick, user_email, user_phone, user_joindate, user_addr, user_type, user_status, user_point);
 
                                         UserInfo.info = vo;
 
