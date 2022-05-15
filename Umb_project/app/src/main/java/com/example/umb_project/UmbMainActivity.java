@@ -167,7 +167,7 @@ public class UmbMainActivity extends AppCompatActivity implements MapView.MapVie
         });
     }
 
-    //카카오 지도 API 사용하기위해 디버그 토큰 발급
+    //카카오 지도 API 사용하기위해 디버그 해쉬 키 발급
     private void getAppKeyHash() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
