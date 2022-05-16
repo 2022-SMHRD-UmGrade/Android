@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.umb_project">
     <!-- 인터넷 권한 설정 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 지도 API 권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 지도 API 권한 설정 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
@@ -34,7 +35,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="49ef1afb711e53c2c92c917ccb2d1f7a" />
+            android:value="875e09f7c33e96c4a8a4b4701b217c75" />
 
         <activity
             android:name=".UmbMainActivity"

@@ -51,8 +51,6 @@ public class UmbLoginActivity extends AppCompatActivity {
 
         vo = UserInfo.info;
 
-
-
         edtId = findViewById(R.id.edtId);
         edtPw = findViewById(R.id.edtPw);
         btnJoin = findViewById(R.id.btnJoin);
